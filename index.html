@@ -5,52 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=no initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>e-commerce layout</title>
 
     <style>
 
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 14500px;
-  position: relative;
-  margin: auto;
-  margin-left: 10px;
-  margin-top: -20px;
-  margin-right: 10px;
-
-}
-
-.slideshow-container img{
-  width: 1450px;
-  height: 400px;
-
-  
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #fcfafa;
-  font-size: 12px;
-  padding: 8px 12px;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
         navbar {
             display: flex;
             background-color: whitesmoke;
             box-shadow:5px 5px 5px rgb(188, 184, 184);
             margin-left: 9px;
-            margin-right: 12px;      
+            margin-right: 12px;
+            
         }
 
         .nav{
@@ -74,11 +41,28 @@
             
         }
 
+        @media (max-width:400px) {
+        .logo{
+        height: 30px;
+        width: 80px;
+        margin-top: 20px;
+        margin-left: 5px;
+       
+           }
+       }
+
         .nav div{
             font-size: 18px;
             margin-right: 50px;
             cursor: pointer;
         }
+
+        @media (max-width:400px) {
+        .nav div{
+        margin-right: 0px;
+       
+            }
+        }  
 
         .nav div:hover{
             background-color: orangered;
@@ -97,18 +81,19 @@
             margin-top:20px ;
             margin-bottom: 20px;
         
-            }
+        }
 
-            .search1{
+        .search1{
                 padding-left: 20px;
                 padding-right: 150px;
                 padding-top: 5px;
                 padding-bottom: 5px;
-            }
+                size: -10px;
+        }
 
-            button:hover{
+        button:hover{
                 color:orangered ;
-            }
+        }
 
         div #select{
             border: none;
@@ -128,37 +113,76 @@
             color: orangered;
         }
 
-         section{
+
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 14500px;
+            position: relative;
+            margin: auto;
+            margin-left: 10px;
+            margin-top: -20px;
+            margin-right: 10px;
+
+            }
+
+            .slideshow-container img{
+            width: 1450px;
+            height: 400px;
+
+            
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #fcfafa;
+            font-size: 12px;
+            padding: 8px 12px;
+            }
+
+            .active {
+            background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+
+        .products{
             background-color: whitesmoke;
             margin: 10px;
             display: grid;
-            grid-template-rows: 300px 300px;
+            grid-template-rows: 350px 350px;
             grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+
+        @media (max-width:400px) {
+        .products{
+            grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+                
+            }
         }
 
         .itemsection{
             background-color: whitesmoke;
             margin: 10px;
             display: grid;
-            grid-template-rows: 200px 200px;
-            grid-template-columns: 20% 20% 20% 20% 20% ;
-            height: 210px;
+            grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+            height: auto;
             cursor: pointer;
             
-
         }
 
         .temp{
             background-color: whitesmoke;
             margin: 10px;
             display: grid;
-            grid-template-rows: 300px 300px;
-            grid-template-columns: 50% 50% ;
-            height: 390px;
-            
-            
+            grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+            height: auto; 
 
         }
+
 
         .item{
             margin: 10px;
@@ -178,19 +202,27 @@
             box-shadow:5px 5px 5px rgb(188, 184, 184);
             text-align: center;
             line-height: 10px;
-            height: 320px;
+            height: auto;
             margin-top: 20px;
             
         }
 
         .itemtemp img{
-            height: 320px;
-            width: 680px;
+            width: 100%;
+            height: auto;
         }
 
         iframe{
-            width: 680px;
-            height: 320px;
+            width: 100%;
+            height: 380px;
+        }
+
+        @media (max-width:400px) {
+        iframe{
+        height: auto;
+        width: 100%;
+            
+            }
         }
 
         .item:hover{
@@ -218,7 +250,20 @@
             background-color:white;
             box-shadow:5px 5px 5px rgb(188, 184, 184);
             text-align: center;
-            line-height: 10px;
+            line-height: 10px;  
+            
+        }
+        .container img{
+            width: 75%;
+            height: 300px;
+        }
+
+        @media (max-width:400px) {
+        .container img{
+        height: auto;
+        width: 100%;
+       
+            }
         }
 
         .container .heading{
@@ -242,7 +287,14 @@
             font-size: 20px;
             color: blue;    
         }
-            
+
+        @media (max-width:400px) {
+            .features{
+                font-size: 12px;
+       
+            }
+        }   
+
         .container ul {
             font-size: 15px;
             line-height: 25px;
@@ -296,8 +348,8 @@
         }
 
         .img1{
-            width: 300px;
-            height: 250px;
+            width: 100%;
+            height: auto;
             margin-left: px;
             cursor: pointer;
         }
@@ -305,6 +357,7 @@
         .img1:hover{
             transform: scale(1.1);
         }
+
         
     </style>
 
@@ -312,7 +365,7 @@
 </head>
 
 <body>
-
+       
     <navbar>
         <img class="logo" src="logo.png">
         <div class="searchbar"> 
@@ -325,11 +378,11 @@
             <div>products</div>
             <div>about</div>
             <div>orders</div>
+        
         </div>
        
-
     </navbar>
-
+    
     <div class="slideshow-container">
 
         <div class="mySlides fade">
@@ -387,7 +440,7 @@
             <section class="temp">
 
                 <div class="itemtemp">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7i1dYpURi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/7i1dYpURi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="itemtemp">
                     <img src="https://i.ytimg.com/vi/_8MBCEbP_A4/maxresdefault.jpg">
@@ -396,14 +449,14 @@
             </section>
 
 
-             <section>
+        <section class="products">
 
             <div class="container"><img  class="img1" src="https://freepngimg.com/thumb/samsung_mobile_phone/5-2-samsung-mobile-phone-png-hd.png"></div>
 
             <div class="container">
 
                 <h3 class="heading">samsung galaxy smartphone</h3>
-                <p class="features">(4GB RAM, 64GB internal storage with 64MP camera)</p><br><br>
+                <p class="features">(4GB RAM, 64GB internal storage with 64MP camera)</p><br>
                 <p><b class="price">₹ 15000/-</b> <del>22000/-</del></p>
                 <p><b>Reviews :</b><span>★★★☆☆</span></p><br><br>
                 <button class="buy">Buy now</button>
@@ -429,7 +482,7 @@
             <div class="container">
 
                 <h3 class="heading">redmi note 11 smartphone</h3>
-                <p class="features">(6GB RAM, 128GB internal storage with 50MP camera)</p><br><br>
+                <p class="features">(6GB RAM, 128GB internal storage with 50MP camera)</p><br>
                 <p><b class="price">₹ 12000/-</b> <del>20000/-</del></p>
                 <p ><b>Reviews :</b><span>★★★★☆</span></p><br><br>
                 <button class="buy">Buy now</button>
@@ -456,7 +509,7 @@
             Created by mr. Ashwani Agnihotri@2023
         </footer>
 
-<!--------script code-------->
+        <!--------script code-------->
         
         <script>
             let slideIndex = 0;
@@ -478,9 +531,15 @@
               dots[slideIndex-1].className += " active";
               setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
-            </script>
+
+        </script>
     
 </body>
 </html>
+
+
+
+
+
 
 
